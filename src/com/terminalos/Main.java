@@ -167,15 +167,15 @@ public class Main {
         onesecondpause();
     }
     public static void loadingbar2() {
-        System.out.print("\r_ ");
+        System.out.print("\r_  ");
         onesecondpause();
         System.out.print("\r  ");
         onesecondpause();
-        System.out.print("\r_ ");
+        System.out.print("\r_  ");
         onesecondpause();
         System.out.print("\r  ");;
         onesecondpause();
-        System.out.print("\r_ ");
+        System.out.print("\r_  ");
         onesecondpause();
         System.out.print("\r  ");
     }
