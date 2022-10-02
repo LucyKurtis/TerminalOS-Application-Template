@@ -17,48 +17,11 @@ import javax.swing.JFrame;
 public class Main {
     // Managing Scripts
     public static void main(String[] args) throws IOException, InterruptedException, URISyntaxException {
-        cls();
         mainmenu();
-    }
-    //loading animation
-    static void loading() throws IOException, InterruptedException {
-        loadingbar2();
-        cls();
     }
     //Main Menu Application
     static void mainmenu() throws IOException, InterruptedException, URISyntaxException { // Main Method
-        header();
-        System.out.println(Color.CYAN_BRIGHT + " | ");
-        System.out.println(Color.CYAN_BRIGHT + " |  " + Color.MAGENTA_BRIGHT + "Press H followed by the Enter key for help!");
-        System.out.println(Color.CYAN_BRIGHT + " | ");
-        System.out.println(Color.CYAN_BRIGHT + " | " + Color.RESET + " N > Normal Boot");
-        System.out.println(Color.CYAN_BRIGHT + " | " + Color.RESET + " E > Experimental Boot");
-        System.out.println(Color.CYAN_BRIGHT + " | ");
-        System.out.println(Color.CYAN_BRIGHT + " | " + Color.RESET + " R > Enter Update Enviornment");
-        System.out.println(Color.CYAN_BRIGHT + " | ");
-        Scanner Input = new Scanner(System.in);  // Create a Scanner object
-        System.out.println(Color.CYAN_BRIGHT + " |_  " + Color.RESET + Color.BLUE_BACKGROUND + "Type here:");
-        System.out.println(Color.BLUE_BRIGHT);
-        String rawuserinput = Input.next(); // Read user input
-        String userinput = rawuserinput.replaceAll("\\s", "\\\\ "); // End Scanner Object
-        System.out.println(Color.RESET);
-    }
-    static void help() {
-        header();
-        System.out.println(Color.CYAN_BRIGHT + " | " + Color.MAGENTA + " Welcome to the TerminalOS Booter");
-        System.out.println(Color.CYAN_BRIGHT + " |  " + Color.MAGENTA_BRIGHT + "Press H followed by the Enter key for help!");
-        System.out.println(Color.CYAN_BRIGHT + " | ");
-        System.out.println(Color.CYAN_BRIGHT + " | " + Color.RESET + " N > Normal Boot");
-        System.out.println(Color.CYAN_BRIGHT + " | " + Color.RESET + " E > Experimental Boot");
-        System.out.println(Color.CYAN_BRIGHT + " | ");
-        System.out.println(Color.CYAN_BRIGHT + " | " + Color.RESET + " R > Enter Update Enviornment");
-        System.out.println(Color.CYAN_BRIGHT + " | ");
-        Scanner Input = new Scanner(System.in);  // Create a Scanner object
-        System.out.println(Color.CYAN_BRIGHT + " |_  " + Color.RESET + Color.BLUE_BACKGROUND + "Type here:");
-        System.out.println(Color.BLUE_BRIGHT);
-        String rawuserinput = Input.next(); // Read user input
-        String userinput = rawuserinput.replaceAll("\\s", "\\\\ "); // End Scanner Object
-        System.out.println(Color.RESET);
+
     }
 
     // -- LIBRARIES --
@@ -166,19 +129,6 @@ public class Main {
         System.out.println("\n Done");
         onesecondpause();
     }
-    public static void loadingbar2() {
-        System.out.print("\r_  ");
-        onesecondpause();
-        System.out.print("\r  ");
-        onesecondpause();
-        System.out.print("\r_  ");
-        onesecondpause();
-        System.out.print("\r  ");;
-        onesecondpause();
-        System.out.print("\r_  ");
-        onesecondpause();
-        System.out.print("\r  ");
-    }
     public static void animlogo() {
         smolpause();
         System.out.println(" _____                   _             _ _____ _____ ");
@@ -224,12 +174,6 @@ public class Main {
     }
     static void seperator() {
         System.out.println("--------------------------------------------------------------------------------");
-    }
-    static void header() {
-        SystemInfo systemInfo = new SystemInfo();
-        OperatingSystem operatingSystem = systemInfo.getOperatingSystem();
-        System.out.println(Color.CYAN_BRIGHT + " ______________________________________________________________________________________");
-        System.out.println(Color.CYAN_BRIGHT + " |   " + Color.BLACK_BRIGHT + "- TerminalOS BIOS v0.1 - Host OS: " + operatingSystem.toString() + Color.RESET);
     }
     // functions and enums
     static void cls() throws IOException, InterruptedException {
